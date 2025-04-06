@@ -1,0 +1,373 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --darkgray:#212121 ;
+    --lightgray: #3a3939;
+    --pinkcolor: #D5549F;
+    --mainfont:"Emblema One", system-ui; 
+    --secondfont: "caveat", cursive;
+
+}
+
+.maincontainer{
+
+    width: 100%;
+    background-color:var(--darkgray) ;
+    padding: 3vh 7% 2vh;
+}
+
+
+.maincontainer .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.maincontainer .header .logo{
+    width: 15%;
+    
+}
+.maincontainer .header .logo img {
+
+    width: 100%;
+    
+}
+
+.maincontainer .header .hline{
+    width: 1px;
+    height: 60px;
+    background-color: rgb(99, 92, 92) ;
+}
+.maincontainer .header .search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--lightgray);
+    border-radius: 20px;
+    padding: 15px 20px;
+    color: #555;
+    font-size: 25px;
+}
+.maincontainer .header .search input{
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+    width: 80%;
+    outline: none;
+    color: aliceblue;
+}
+
+
+.maincontainer .header ul{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+}
+
+.maincontainer .header ul li a{
+    color: #666;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: var(--secondfont);
+    font-size: 19px;
+    font-weight: bold ;
+    transition: 1s ;
+
+}
+
+.maincontainer .header ul li a:hover,
+.maincontainer .header ul .active a{
+    color: var(--pinkcolor);
+}
+
+
+.maincontainer .header ul .profile{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background-color: var(--lightgray );
+    border-radius: 20px;
+    padding:5px 20px;
+
+
+}
+.maincontainer .header ul .profile:hover{
+    background-color: var(--pinkcolor);
+}
+
+.maincontainer .header ul .profile:hover a{
+    color: aliceblue    ;
+}
+
+.maincontainer .header ul .profile img{
+    border-radius: 50%;
+
+}
+ 
+.maincontainer .content {
+    width: 100%;
+    padding: 5vh 5%;
+    background-color: var(--lightgray);
+    border-radius: 30px;
+    margin-top: 50px;
+
+
+}
+ 
+.maincontainer .content .banner{
+    width: 100%;
+    background-image: url(../images/banner-bg.jpg);
+    background-size: 100% 100%;
+    padding: 7vh 5%;
+    border-radius: 30px;
+    color: white;
+
+}
+.maincontainer .content .banner h1 span{
+    color: var(--pinkcolor);
+    
+}
+.maincontainer .content .banner h3 span{
+    font-family: var(--secondfont);
+    font-size: 29px;
+    font-weight: bold;
+}
+.maincontainer .content .banner h1 {
+    font-family: var(--mainfont);
+    font-size: 45px;
+    margin: 35px 0;
+
+}
+
+.maincontainer .content .banner button ,
+.maincontainer .content .popular button,
+.maincontainer .content .library  button{
+    background-color: var(--pinkcolor);
+    color: white;
+    font-family: var(--secondfont);
+    border-radius: 20px;
+    border: none;
+    font-size: 25px;
+    padding: 10px 20px;
+    transition: 1s;
+
+}
+
+.maincontainer .content .banner button:hover,
+.maincontainer .content .popular button:hover,
+.maincontainer .content .library  button:hover{
+    color: var(--pinkcolor);
+    background-color: aliceblue;
+
+}
+
+.maincontainer .content .popular{
+    width: 100%;
+    padding: 5vh 5%;
+    background-color: var(--darkgray);
+    margin-top: 50px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.maincontainer .content .popular h2,
+.maincontainer .content .library h2{
+    color: var(--pinkcolor);
+    font-family: var(--mainfont);
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    text-align: left;
+
+}
+
+.maincontainer .content .popular h2 span,
+.maincontainer .content .library h2 span{
+    color: aliceblue;
+    text-decoration: underline;
+}
+
+.maincontainer .content .popular .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+    margin-bottom: 50px;
+}
+
+.maincontainer .content .popular .cards .card{
+    width: 22%;
+    background-color: var(--lightgray);
+    padding: 20px;
+    border-radius: 30px;
+    
+}
+
+.maincontainer .content .popular .cards .card img{
+    width: 100%;
+    border-radius: 20px;
+    
+}
+
+.maincontainer .content .popular .cards .data{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    color: #888888;
+    font-family: var(--secondfont);
+    font-size: 15px;
+}
+.maincontainer .content .popular .cards .data h3{
+    color: aliceblue;
+    font-family: var(--mainfont);
+
+}
+
+.maincontainer .content .popular .cards .data .fa-star{
+    color: yellow;
+}
+.maincontainer .content .popular .cards .data .fa-download{
+    color: var(--pinkcolor);
+}
+
+.maincontainer .content .popular .cards .card img:hover{
+    transform: rotate(5deg) scale(1.1);
+    transition: 1s;
+}
+
+.maincontainer .content .library{
+    background-color: var(--darkgray);
+    width: 100%;
+    padding: 5vh 5%;
+    border-radius: 30px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.maincontainer .content .library .gamaing{
+    width: 100%;
+    margin-top: 30px;
+
+
+}
+
+.maincontainer .content .library .gamaing .game{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+.maincontainer .content .library .gamaing .game img{
+    border-radius: 20px;
+}
+
+.maincontainer .content .library .gamaing .game h3{
+    color: aliceblue;
+    font-family: var(--mainfont);
+    text-transform: capitalize;
+    
+}
+.maincontainer .content .library .gamaing .game p{
+    color: #666;
+    font-family: var(--secondfont);
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+
+}
+
+.maincontainer .content .library .gamaing .game button{
+    background-color: transparent;
+    border: 1px solid #666;
+    color: #666; 
+    padding: 8px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: var(--secondfont);
+    border-radius: 20px;
+}
+.maincontainer .content .library .gamaing .game .btn{
+    background-color: transparent;
+    border: 1px solid color(srgb red green blue);
+    color: var(--pinkcolor); 
+    padding: 8px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: var(--secondfont);
+    border-radius: 20px;
+}
+
+.maincontainer .footer{
+    width: 100%;
+    text-align: center;
+    color: aliceblue;
+    font-family: var(--secondfont);
+    font-size: 22px;
+    margin: 5px 0 20px;
+
+}
+.maincontainer .footer span{
+    color: var(--pinkcolor);
+    font-family: var(--mainfont);
+
+}
+
+
+/* Media Query for mobile devices */
+@media screen and (max-width: 768px) {
+    /* تغيير شكل الشعار */
+    .logo img {
+        width: 120px; /* تعديل حجم الشعار ليكون أصغر على الهواتف */
+    }
+
+    /* تعديل شكل القائمة */
+    .header ul {
+        display: none; /* إخفاء القائمة في الهواتف الصغيرة */
+    }
+
+    .header .search {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* تعديل التصميم في البانر */
+    .banner h1 {
+        font-size: 24px;
+    }
+
+    .banner h3 {
+        font-size: 18px;
+    }
+
+    /* تغيير عرض البطاقات في المحتوى */
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* بطاقتين في السطر */
+        gap: 20px;
+    }
+
+    /* تعديل تصميم footer */
+    .footer p {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /* تعديل العناصر داخل مكتبة الألعاب */
+    .gamaing .game {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gamaing .game img {
+        max-width: 100%; /* ضبط عرض الصور ليكون مناسباً */
+    }
+}

@@ -1,0 +1,511 @@
+/* RESET بسيط */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root{
+    --darkgray:#212121 ;
+    --lightgray: #3a3939;
+    --pinkcolor: #D5549F;
+    --mainfont:"Emblema One", system-ui; 
+    --secondfont: "caveat", cursive;
+
+}
+  
+  /* إعداد خلفية الصفحة وخطوط أساسية */
+  body {
+    background-color: var(--dark-color);
+    font-family: var(--mainfont);
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* ألوان متغيرة لاستخدامها في التنسيق */
+  :root {
+    --pink-color: #ff4d6d;
+    --dark-color: #1e1e1e;
+    --card-color: #2a2a2a;
+    --text-light: #ffffff;
+    --text-dim: #b3b3b3;
+  }
+  
+  /* حاوية رئيسية لتحديد عرض الصفحة */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* ================= HEADER ================= */
+  .main-header {
+    background-color: #202020;
+    padding: 15px 0;
+  }
+  
+  .main-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* الشعار */
+  .header .container .logo{
+    width: 15%;
+    
+}
+.header .container .logo img {
+
+    width: 100%;
+    
+}
+  
+  /* شريط البحث */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--lightgray);
+    border-radius: 20px;
+    padding: 15px 20px;
+    color: #555;
+    font-size: 25px;
+  }
+  
+  .search-bar input {
+
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  /* القائمة العلوية */
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .main-nav ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .main-nav ul li a:hover,
+  .main-nav ul li a.active {
+    color: var(--pink-color);
+  }
+
+.main-header .container .main-nav ul .profile{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background-color: var(--lightgray );
+    border-radius: 20px;
+    padding:5px 20px;
+    
+
+}
+.main-header .container .main-nav ul .profile:hover{
+    background-color: var(--pinkcolor);
+}
+
+.main-header .container .main-nav ul.profile:hover a{
+    color: aliceblue    ;
+}
+
+.main-header .container .main-nav ul .profile img{
+    border-radius: 50%;
+
+}
+  
+  /* ================= MAIN CONTENT ================= */
+  .main-content {
+    display: flex;
+    gap: 40px;
+    margin: 40px 0;
+  }
+  
+  /* قسم الألعاب المميزة (يسار) */
+  .featured-section {
+    flex: 2;
+  }
+  
+  
+
+  .top-downloaded h2 ,
+  .featured-section h2 {
+    color: var(--pink-color);
+    font-family: var(--secondfont);
+  }
+  
+  .top-downloaded h2 span ,
+  .featured-section h2 span{
+    color: aliceblue;
+    text-decoration: underline;
+    font-size: 24px;
+    margin-bottom: 20px;
+   
+  }
+  
+  
+  /* بطاقات الألعاب المميزة */
+  .featured-cards {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .featured-card {
+    background-color: var(--card-color);
+    border-radius: 12px;
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .featured-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .featured-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .featured-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .sub-info {
+    color: var(--text-dim);
+    margin-bottom: 10px;
+  }
+  
+
+ 
+  
+  .stat .value {
+    color: #fff;
+  }
+  
+  /* قسم الألعاب الأكثر تحميلًا (يمين) */
+  .top-downloaded {
+    flex: 1;
+  }
+  
+  .download-list {
+    background-color: var(--card-color);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .download-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .download-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .download-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+  }
+
+  .download-item .info h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .item-stats {
+    font-size: 14px;
+    color: var(--text-dim);
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .view-all {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--pink-color);
+    font-weight: bold;
+    margin-left: 5px;
+    transition: color 0.3s;
+  }
+  
+  .view-all:hover {
+    color: #fff;
+  }
+
+  
+.live-stream {
+  margin: 40px 0;
+  text-align: center;
+  
+}
+
+/* تنسيق العنوان */
+.live-stream h2 span {
+    text-decoration: underline;
+    color: aliceblue; /* لون مميز */
+}
+.live-stream  h2 {
+   color: var(--pink-color); 
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+
+/* الحاوية التي تضم البطاقات الثلاث */
+.stream-steps {
+  display: flex;
+  flex-wrap: wrap; /* يسمح بتلف البطاقات إذا ضاق العرض */
+  gap: 20px;
+ 
+  justify-content: center; /* توسيط البطاقات أفقياً */
+}
+
+/* تنسيق كل بطاقة */
+.step-card {
+  flex: 1;               /* يسمح للبطاقة بالتمدد */
+  min-width: 250px;      /* أقل عرض للبطاقة */
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* الأيقونة أو الصورة في أعلى البطاقة */
+.step-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: contain; /* لضبط الصورة داخل المساحة */
+}
+
+/* عنوان البطاقة */
+.step-card h3 {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* نص البطاقة */
+.step-card p {
+  color: #b3b3b3;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* زر في الأسفل */
+.btn-wrapper {
+  margin-top: 20px;
+}
+
+.btn-profile {
+  display: inline-block;
+  background-color: #ff4d6d; /* لون الزر */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-profile:hover {
+  background-color: #fff;
+  color: #ff4d6d;
+}
+
+/* قسم Most Popular Live Stream */
+.popular-live {
+    margin: 40px 0;
+    text-align: center;
+  }
+  
+  /* تنسيق العنوان */
+  .popular-live .section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .popular-live .section-title span {
+    color: #ff4d6d; /* لون مميز */
+  }
+  
+  /* حاوية البثوث */
+  .live-streams {
+    display: flex;
+    flex-wrap: wrap; /* يسمح بتلف العناصر على سطرين أو أكثر إذا ضاق العرض */
+    gap: 20px;
+    justify-content: center; /* توسيط العناصر */
+    margin-bottom: 20px;
+  }
+  
+  /* تنسيق كل بطاقة بث */
+  .stream-card {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    width: 220px; /* عرض ثابت يمكنك تعديله */
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .stream-card:hover {
+    transform: scale(1.03);
+  }
+  
+  /* صورة البث */
+  .stream-card img {
+    border-radius: 15px;
+    width: 100%;
+    height: 130px; /* ارتفاع مناسب للصورة */
+    object-fit: cover; /* اقتصاص الصورة حسب الإطار */
+  }
+  
+  /* معلومات البث */
+  .stream-info {
+    padding: 10px;
+    text-align: left; /* يمكنك تغييره إلى center إذا أردت */
+  }
+  .stream-info img{
+    width: 15%;
+    height: 15%;
+  }
+  
+  .stream-info h4 {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .stream-info p {
+    margin: 0;
+    color: #b3b3b3;
+    font-size: 14px;
+  }
+  
+  /* الزر في الأسفل */
+  .btn-wrapper {
+    margin-top: 20px;
+  }
+  
+  .btn-discover {
+    display: inline-block;
+    background-color: #ff4d6d; /* لون الزر */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-discover:hover {
+    background-color: #fff;
+    color: #ff4d6d;
+  }
+  
+  /* ================= FOOTER ================= */
+  .main-footer {
+    background-color: #202020;
+    text-align: center;
+    padding: 15px 0;
+    color: #b3b3b3;
+    font-size: 14px;
+  }
+  
+  .main-footer p {
+    margin: 5px 0;
+  }
+
+
+
+  /* Media Query for Mobile Devices */
+@media screen and (max-width: 767px) {
+  /* مثال: تعديل الشعار ليصبح أصغر */
+  .logo img {
+    width: 150px;  /* تغيير عرض الشعار */
+  }
+
+  /* تصغير حجم شريط البحث */
+  .search-bar input {
+    width: 90%;  /* شريط البحث يصبح أوسع */
+    padding: 10px;
+  }
+
+  /* تغيير تصميم القوائم العلوية */
+  .main-nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  .main-nav li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* تعديل تصميم البطاقات في قسم الألعاب المميزة */
+  .featured-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* عرض عمودين */
+    gap: 10px;
+  }
+
+  .featured-card {
+    text-align: center;
+  }
+
+  /* تعديل عرض قائمة الألعاب الأكثر تحميلاً */
+  .download-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  /* تصغير حجم الصورة في البطاقة */
+  .download-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* تعديل الأزرار لتكون أكثر وضوحًا */
+  .btn-wrapper a {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  /* تعديل عرض قسم الـ Live Stream */
+  .stream-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* تعديل عرض الـ Live Stream Cards */
+  .live-streams {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* عرض عمودين */
+    gap: 10px;
+  }
+}
+

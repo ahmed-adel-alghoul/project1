@@ -1,0 +1,387 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #0f0f0f;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root{
+    --darkgray:#212121 ;
+    --lightgray: #3a3939;
+    --pinkcolor: #D5549F;
+    --mainfont:"Emblema One", system-ui; 
+    --secondfont: "caveat", cursive;
+
+}
+
+/* الهيدر */
+
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo{
+    width: 15%;
+    
+}
+.header .logo img {
+
+    width: 100%;
+    
+}
+
+.header .hline{
+    width: 1px;
+    height: 60px;
+    background-color: rgb(99, 92, 92) ;
+}
+.header .search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--lightgray);
+    border-radius: 20px;
+    padding: 15px 20px;
+    color: #555;
+    font-size: 25px;
+}
+.header .search input{
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+    width: 80%;
+    outline: none;
+    color: aliceblue;
+}
+
+
+.header ul{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+}
+
+.header ul li a{
+    color: #666;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: var(--secondfont);
+    font-size: 19px;
+    font-weight: bold ;
+    transition: 1s ;
+
+}
+
+.header ul li a:hover,
+.header ul .active a{
+    color: var(--pinkcolor);
+}
+
+
+.header ul .profile{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background-color: var(--lightgray );
+    border-radius: 20px;
+    padding:5px 20px;
+
+
+}
+.header ul .profile:hover{
+    background-color: var(--pinkcolor);
+}
+
+.header ul .profile:hover a{
+    color: aliceblue    ;
+}
+.header ul .profile img{
+    border-radius: 50%;
+
+}
+/* الحاوية الرئيسية */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    align-items: flex-start;
+}
+
+/* قسم البث المباشر */
+.live-streams {
+    flex: 2;
+    margin-right: 20px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.highlight {
+    color: #ff4da6;
+}
+
+.streams {
+    display: flex;
+    gap: 20px;
+}
+
+.stream {
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.stream img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* قسم أفضل الستريمرز */
+.top-streamers {
+    flex: 1;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.top-streamers ul {
+    list-style: none;
+    padding: 0;
+}
+
+.top-streamers ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.top-streamers ul li:last-child {
+    border-bottom: none;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.follow-btn {
+    background: #ff4da6;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mo-stream {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+h2 span {
+    color: #ff4c8b;
+}
+
+.streams {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.stream-card {
+    background-color: #1e1e1e;
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.stream-card:hover {
+    transform: scale(1.05);
+}
+
+.stream-card img {
+    width: 100%;
+    border-bottom: 2px solid #ff4c8b;
+}
+
+.info {
+    padding: 15px;
+    text-align: left;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #ff4c8b;
+}
+
+.verified {
+    color: #ff4c8b;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+h3 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.load-more {
+    background: #ff4c8b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.load-more:hover {
+    background: #ff3366;
+}
+
+footer {
+    margin-top: 30px;
+    color: #888;
+    text-align: center;
+    background-color: var(--darkgray);
+}
+
+
+
+
+
+
+/* شاشات أقل من 768px - موبايل */
+@media (max-width: 767px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 10px;
+    }
+  
+    .header .logo {
+      width: 40%;
+    }
+  
+    .header .search {
+      width: 100%;
+      font-size: 18px;
+    }
+  
+    .header ul {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 10px;
+    }
+  
+    .container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .live-streams,
+    .top-streamers {
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+  
+    .streams {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .stream,
+    .stream-card {
+      width: 90%;
+    }
+  
+    .mo-stream {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .header {
+      flex-wrap: wrap;
+      padding: 15px;
+    }
+  
+    .header .logo {
+      width: 30%;
+    }
+  
+    .header ul {
+      width: 100%;
+      justify-content: space-around;
+      margin-top: 10px;
+    }
+  
+    .container {
+      flex-direction: column;
+      padding: 30px;
+    }
+  
+    .live-streams,
+    .top-streamers {
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+  
+    .stream,
+    .stream-card {
+      width: 45%;
+    }
+  
+    .streams {
+      justify-content: space-around;
+    }
+  
+    .mo-stream {
+      width: 100%;
+    }
+  }
+  
