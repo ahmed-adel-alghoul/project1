@@ -177,6 +177,120 @@ h1{
     text-align: center;
 }
 
+
+.clips-section {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #2a2a2a;
+  border-radius: 20px;
+}
+
+.clips-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid white;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.clips-title span {
+  color: #ec6090;
+}
+
+.clips-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.clip-card {
+  background-color: #1f1f1f;
+  border-radius: 20px;
+  width: 23%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.clip-image {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.clip-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 12px solid #ec6090;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.clip-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.clip-info strong {
+  color: white;
+}
+
+.clip-info span {
+  color: #ec6090;
+  display: flex;
+  align-items: center;
+}
+
+.clip-info span::before {
+  content: '👁';
+  margin-right: 5px;
+}
+
+.load-more {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.load-more button {
+  padding: 10px 30px;
+  background-color: #ec6090;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.load-more button:hover {
+  background-color: #e05080;
+}
+
 /* =============== Fortnite Details Section =============== */
 .fortnite-details {
   padding: 30px 0;
